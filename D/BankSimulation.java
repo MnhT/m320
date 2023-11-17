@@ -4,7 +4,7 @@ import D.Konto;
 
 // Testklasse
 public class BankSimulation {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         // Drei verschiedene Konten erstellen
         Konto konto1 = new Konto(1, 1000);
         Konto konto2 = new Konto(2, 1500);
