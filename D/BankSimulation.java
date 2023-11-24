@@ -4,20 +4,20 @@ import D.Konto;
 
 // Testklasse
 public class BankSimulation {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         // Drei verschiedene Konten erstellen
-        Konto konto1 = new Konto(1, 1000);
-        Konto konto2 = new Konto(2, 1500);
-        Konto konto3 = new Konto(3, 2000);
+        Konto konto1 = new Konto(1, 100, 500);
+        Konto konto2 = new Konto(2, 100, 500);
+        Konto konto3 = new Konto(3, 100, 500);
 
         // Einzahlung auf Konto 1
-        konto1.einzahlen(500);
+        konto1.einzahlen(0);
 
         // Überweisung von Konto 2 auf Konto 3
-        konto2.ueberweisen(konto3, 200);
+        konto2.ueberweisen(konto3, 500);
 
         // Abhebung von Konto 3
-        konto3.abheben(100);
+        konto3.abheben(0);
 
         // Ausgabe der Kontostände
         System.out.println("Konto " + konto1.getKontoNr() + ": Saldo = " + konto1.getSaldo());
