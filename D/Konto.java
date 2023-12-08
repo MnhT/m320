@@ -4,10 +4,14 @@ public class Konto {
     private int kontoNr;
     private double saldo;
 
+    private double limite;
+
     // Konstruktor mit Startguthaben von 100
-    public Konto(int kontoNr, int Saldo) {
+    public Konto(int kontoNr, double Saldo, double Limite) {
         this.kontoNr = kontoNr;
         this.saldo = Saldo;
+        this.limite = Limite;
+
     }
 
     // Getter für KontoNr
@@ -28,7 +32,7 @@ public class Konto {
 
     // Abheben-Methode
     public void abheben(double betrag) {
-        if (saldo >= betrag) {
+        if (saldo + limite >= betrag) {
             saldo -= betrag;
             System.out.println("Abhebung von " + betrag + " von Konto " + kontoNr + ". Neuer Saldo: " + saldo);
         } else {
@@ -38,7 +42,7 @@ public class Konto {
 
     // Überweisen-Methode
     public void ueberweisen(Konto nachKonto, double betrag) {
-        if (saldo >= betrag) {
+        if (saldo + limite >= betrag) {
             abheben(betrag);
             nachKonto.einzahlen(betrag);
             System.out.println("Überweisung von Konto " + kontoNr + " nach Konto " + nachKonto.getKontoNr() + " erfolgreich.");
