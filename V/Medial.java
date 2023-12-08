@@ -18,7 +18,7 @@ public class Medial {
         medienList.add(book);
 
         // Ausgabe der Elemente in der Konsole
-        for (medien medien : medienList) {
+        for (medien medien : medienList) {44444
             System.out.println("Title: " + medien.getTitle());
             System.out.println("Year: " + medien.getYear());
             System.out.println("Price: $" + medien.getPrice());
