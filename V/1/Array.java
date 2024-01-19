@@ -1,9 +1,3 @@
-package V;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 abstract class medien {
     private String title;
     private int year;
